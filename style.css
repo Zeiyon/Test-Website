@@ -1,6 +1,8 @@
 body {
     background-color: rgb(28, 36, 44);
+    font-family: 'Poppins', sans-serif;
 }
+
 .background-img {
     background-image: linear-gradient(to bottom, rgba(28, 36, 44, 0.75), rgba(28, 36, 44, 1)), url('img.jpg');
     background-size: 100%;
@@ -9,18 +11,117 @@ body {
     width: 100%;
     height: 100%;
     opacity: 50%;
-    z-index: 0;
+    z-index: -2;
     filter: blur(6px);
  }
- .navbar {
-    background-color: black;
-    border-image: linear-gradient(to bottom, rgba(28, 36, 44, 0.75), rgba(28, 36, 44, 1)) 30;
-    border-bottom: 0.1rem solid rgb(47, 47, 47);
-    background: linear-gradient(90deg, transparent, rgb(255, 255, 255, 0.05), transparent);
+
+.navbar::after {
+   content: " ";
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background: linear-gradient(90deg, transparent, rgb(255, 255, 255, 0.05), transparent);
+   bottom: 0px;
  }
- .navbar .btn {
-    margin: 2rem;
+
+.navbar .btn {
+    margin: 24px;
+    padding: 12px 24px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.15);
  }
- .row {
-    
+
+ .navbar .btn:hover {
+   background: rgba(187, 187, 187, 0.15)
  }
+
+.navbar .profile {
+   display: flex;
+   padding: 12px 24px;
+   cursor: pointer;
+   background: #4CB1D0;
+   font-family: 'Poppins', sans-serif;
+   font-size: 14px;
+   color: white;
+   font-weight: bold;
+   border-radius: 8px;
+   opacity: 0.8;
+   transition: 0.5s;
+ }
+
+.navbar .profile:hover {
+   opacity: 1;
+ }
+
+.profile-top {
+   font-size: 16px;
+ }
+
+.profile-bottom {
+   color: #B0E3FFCC;
+   font-size: 14px;
+ }
+
+.profile-img {
+   height: 85px;
+   overflow: clip;
+   margin: -12px 0;
+   margin-top: -24px;
+}
+
+.profile-img img {
+   width: 55px;
+}
+
+.navbar .right-part {
+   display: flex;
+}
+
+.logo {
+   width: 400px;  
+}
+
+.server-ip {
+   display: flex;
+}
+
+.server-ip img {
+   margin: 3rem 0rem 2rem 0rem;
+   width: 55px;
+   height: 55px;
+}
+
+.server-ip p {
+   margin: 0;
+   display: inline-block;
+   font-size: 20px;
+   font-weight: bold;
+   color: white;
+}
+
+.server-details {
+   margin-top: 3rem;
+   margin-left: 0.5rem;
+}
+
+#player-count {
+    font-size: 14px;
+    color: #2C3A47;
+    margin: 0;
+    background-color: #3DD1FF;
+    border-radius: 25px;
+    padding: 0px 8px;
+}
+
+#players-online {
+   color: #3DD1FF;
+   font-size: 14px;
+}
+
+.social {
+   
+}
